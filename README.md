@@ -26,4 +26,5 @@ Your server should be ready to go. You will need to launch Redis first, then you
 If you run your server on one computer, then run the HC and your client from that same computer you can run into one issue. Once the HC is running, your client will attempt to overwrite the current mission in your MPMissioncache folder when you connect. If this happens, it will kick you out of the server and you will need to rejoin. This is a program rights issue where you already have the mission open in one program and are attempting to re-download and overwrite it with another program. After you have gone through that once, Arma 3 will know that you already downloaded the mission file the first time and will not attempt to re-download it again. This will allow your game client to join as normal.
 
 I hope this helps you out! If you find anything I could do better, just post a pull request. 
+
 hogs
