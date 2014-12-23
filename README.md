@@ -1,5 +1,4 @@
-A3_EPOCH_Headless_Client
-========================
+<h2 align="center">Arma 3: Epoch Mod - Headless Client</h2>
 These files are for setting up a headless client in [Arma 3: Epoch Mod](http://epochmod.com/) and should work with minimal editing.
 
 The tutorial I wrote for creating this setup can be found on the official forum ([here](http://epochmod.com/forum/index.php?/topic/29541-headless-clientswalkthrough-w-custom-ai-mission-wip-updateddec-10th/)).
