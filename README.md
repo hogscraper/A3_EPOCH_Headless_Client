@@ -1,25 +1,27 @@
 A3_EPOCH_Headless_Client
 ========================
-These files are for setting up a headless client in Arma 3 Epoch and should work with minimal editing.
-The tutorial I wrote for creating this setup can be found here:
-http://epochmod.com/forum/index.php?/topic/29541-headless-clientswalkthrough-w-custom-ai-mission-wip-updateddec-10th/
+These files are for setting up a headless client in [Arma 3: Epoch Mod](http://epochmod.com/) and should work with minimal editing.
 
-Short Recap:
-1. Add this line to your server config, edited with the IPs your HCs will connect from:
-headlessClients[]={"127.0.0.1","123.4.56.789"};
+The tutorial I wrote for creating this setup can be found on the official forum ([here](http://epochmod.com/forum/index.php?/topic/29541-headless-clientswalkthrough-w-custom-ai-mission-wip-updateddec-10th/)).
 
-2. Add a unit to your mission.sqm with these attributes:
-SIDE: Game Logic, CLASS: Virtual Entities, UNIT: Headless Client, CONTROL: Playable, NAME: somename
+####Short Recap
+**1.** Add this line to your server config, edited with the IPs your HCs will connect from:<br />
+`headlessClients[]={"127.0.0.1","123.4.56.789"};`
 
-3. Add this code to your init.sqf, (edited with whatever file you use to spawn AI):
+**2.** Add a unit to your mission.sqm with these attributes:<br />
+`SIDE: Game Logic, CLASS: Virtual Entities, UNIT: Headless Client, CONTROL: Playable, NAME: somename`
+
+**3.** Add this code to your init.sqf; edited with whatever file you use to spawn AI:<br />
+```
 if (!hasInterface and !isServer) then {
 execVm "custom\Hogs_AI\AI_Init.sqf";
 };
+```
 
-4. Create your HC_Start.bat to launch the HC and place this into the bat:
-start arma3server.exe  -client -connect=127.0.0.1 -mod="@epoch" -password=""
+**4.** Create your HC_Start.bat to launch the HC and place this into the bat:<br />
+`start arma3server.exe  -client -connect=127.0.0.1 -mod="@epoch" -password=""`
 
-If you do not have a password delete -password="" from the above line.
+If you do not have a password delete `-password=""` from the above line.
 
 Your server should be ready to go. You will need to launch Redis first, then your server, then BEC then finally your HC before joining yourself. 
 
