@@ -21,7 +21,7 @@ execVm "custom\Hogs_AI\AI_Init.sqf";
 **4.** Create your HC_Start.bat to launch the HC and place this into the bat:<br />
 `start arma3server.exe  -client -connect=127.0.0.1 -mod="@epoch" -password=""`
 
-If you do not have a password delete `-password=""` from the above line.
+If you do no not have a password, then delete `-password=""` from the above line.
 
 Your server should be ready to go. You will need to launch Redis first, then your server, then BEC then finally your HC before joining yourself. 
 
